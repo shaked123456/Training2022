@@ -13,4 +13,4 @@ strategy:
 
 steps:
 - script: 
-    python36 Flask/app.py
+    python36 Training2022/Flask/app.py
