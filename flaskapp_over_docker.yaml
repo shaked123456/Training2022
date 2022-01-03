@@ -36,5 +36,5 @@ stages:
        displayName: 'Use Python $(pythonVersion)'
 
      - script: 
-        # pip install flask
+        pip install -r Flask/requirements.txt
         python Flask/app.py
