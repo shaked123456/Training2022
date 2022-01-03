@@ -6,7 +6,7 @@
 trigger:
   branches:
     include:
-      - test_branch
+      - new_branch
 
 pool:
   vmImage: ubuntu-latest
