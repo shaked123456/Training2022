@@ -13,4 +13,4 @@ strategy:
 
 steps:
 - script: 
-    python Training2022/Flask/app.py
+    python shaked123456/Training2022/Flask/app.py
