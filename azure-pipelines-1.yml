@@ -6,11 +6,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-resources:
-  repositories:
-    - repository: "shaked123456/Training2022"
-      type: github
+strategy:
+  matrix:
+    Python36:
+      python.version: '3.6'
 
 steps:
 - script: 
-    python Flask/app.py
+    python36 Flask/app.py
