@@ -8,6 +8,10 @@ pool:
 
 resources:
   repositories:
+  - repository: Training2022
+    type: github
+    name: shaked123456/Training2022
+    ref: new_branch
 
 variables:
  pythonVersion: '3.7'
@@ -16,7 +20,7 @@ stages:
 
  - stage: Build
    displayName: Build stage
-   
+
    jobs:
    - job: BuildJob
 
@@ -27,4 +31,4 @@ stages:
        displayName: 'Use Python $(pythonVersion)'
 
      - script: 
-        python shaked123456/Training2022/Flask/app.py
+        python Flask/app.py
