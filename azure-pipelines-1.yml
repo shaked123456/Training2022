@@ -10,7 +10,7 @@ resources:
   repositories:
   - repository: Training2022
     type: github
-    endpoint: MyGitHubServiceConnection
+    endpoint: git@github.com:shaked123456/Training2022.git
     name: shaked123456/Training2022
     ref: new_branch
 
