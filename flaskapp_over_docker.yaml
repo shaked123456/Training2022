@@ -38,3 +38,6 @@ stages:
      - script: 
         pip install -r Flask/requirements.txt
         python app.py
+
+     - script: 
+        python Flask/app.py
