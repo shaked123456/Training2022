@@ -1,0 +1,12 @@
+trigger:
+  branches:
+    include:
+      - new_branch
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: 
+    source antenv/bin/activate
+    python app.py
