@@ -3,10 +3,15 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
+trigger:
+  branches:
+    include:
+      - test_branch
+
 pool:
   vmImage: ubuntu-latest
 
 steps:
 - script: |
-    echo "Testing"
+    echo "Testing by $(my_name)"
 
