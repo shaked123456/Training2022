@@ -6,11 +6,25 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-strategy:
-  matrix:
-    Python36:
-      python.version: '3.6'
+resources:
+  repositories:
 
-steps:
-- script: 
-    python shaked123456/Training2022/Flask/app.py
+variables:
+ pythonVersion: '3.7'
+
+stages:
+
+ - stage: Build
+   displayName: Build stage
+   
+   jobs:
+   - job: BuildJob
+
+     steps:
+     - task: UsePythonVersion@0
+       inputs:
+        versionSpec: '$(pythonVersion)'
+       displayName: 'Use Python $(pythonVersion)'
+
+     - script: 
+        python shaked123456/Training2022/Flask/app.py
