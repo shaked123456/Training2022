@@ -1,12 +1,15 @@
-schedules:
-- cron: "*/5 * * * *"
-  displayName: Run every 5 minutes
-  branches:
-    include:
-      - new_branch
+trigger: none
 
 pool:
   vmImage: ubuntu-latest
+
+schedules:
+  - cron: "*/2 * * * *"
+    displayName: Run every 2 minutes
+    branches:
+      include:
+        - new_branch
+    always: true
 
 stages:
 
