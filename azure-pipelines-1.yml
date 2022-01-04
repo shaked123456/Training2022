@@ -27,7 +27,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - script: docker build -t flask_app Flask/ && docker run -d flask_app 
+    - script: "docker build -t flask_app Flask/ && docker run -d flask_app"
 
 - stage: Test
   displayName: Testing FlaskApp
