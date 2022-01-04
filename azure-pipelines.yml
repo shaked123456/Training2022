@@ -1,6 +1,6 @@
 schedules:
 - cron: "*/5 * * * *"
-  displayName: test-build
+  displayName: Run every 5 minutes
   branches:
     include:
       - new_branch
