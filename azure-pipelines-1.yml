@@ -19,7 +19,7 @@ stages:
 #    steps:
 #    - script: docker build -t flask_app Flask/
 
-- stage: Build and Run
+- stage: Build
   displayName: Build and Run FlaskApp 
   jobs:
   - job: Build_and_Run
