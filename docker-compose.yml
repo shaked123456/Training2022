@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   flask:
-    build: ./Fask
+    build: ./Flask
     container_name: flask
     ports:
       - "2222"
