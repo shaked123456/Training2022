@@ -1,3 +1,10 @@
+schedules:
+- cron: "53 14 * * *"
+  displayName: test-build
+  branches:
+    include:
+    - new_branch
+
 trigger:
   branches:
     include:
