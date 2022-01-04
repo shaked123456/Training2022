@@ -37,7 +37,14 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - script: pytest Flask/test.py 
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(pythonVersion)'
+      displayName: 'Use Python $(pythonVersion)'
+
+    - script: |
+       yum install pytest
+       pytest Flask/test.py 
 
   
    
