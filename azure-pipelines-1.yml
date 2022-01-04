@@ -19,11 +19,11 @@ stages:
 #    steps:
 #    - script: docker build -t flask_app Flask/
 
-- stage: Build&Run
-  displayName: Build&Run FlaskApp 
+- stage: Build and Run
+  displayName: Build and Run FlaskApp 
   jobs:
-  - job: Build&Run
-    displayName: Build&Run
+  - job: Build and Run
+    displayName: Build and Run
     pool:
       vmImage: ubuntu-latest
     steps:
