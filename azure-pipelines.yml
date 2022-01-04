@@ -32,11 +32,10 @@ stages:
         versionSpec: '$(pythonVersion)'
        displayName: 'Use Python $(pythonVersion)'
 
-     - script: 
-       workingDirectory: Training2022
+     - script: cat docker-compose.yml
 
-     - task: DockerCompose@0
-       displayName: Build services
-       inputs:
-         action: Build services
-         dockerComposeFile: 'docker-compose.yml'
+#     - task: DockerCompose@0
+#       displayName: Build services
+#       inputs:
+#         action: Build services
+#         dockerComposeFile: 'docker-compose.yml'
