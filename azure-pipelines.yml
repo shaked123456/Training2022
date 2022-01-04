@@ -4,15 +4,8 @@ pool:
   vmImage: ubuntu-latest
 
 schedules:
-  - cron: "*/2 * * * *"
-    displayName: Run every 2 minutes
-    branches:
-      include:
-        - new_branch
-    always: true
-    
-  - cron: "*/17 * * * *"
-    displayName: Run at midnight
+  - cron: "*/15 * * * *"
+    displayName: Run every 15 minutes
     branches:
       include:
         - new_branch
