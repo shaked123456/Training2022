@@ -1,5 +1,5 @@
 schedules:
-- cron: "53 14 * * *"
+- cron: "3 15 * * *"
   displayName: test-build
   branches:
     include:
