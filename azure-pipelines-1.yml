@@ -23,7 +23,7 @@ stages:
   displayName: Build and Run FlaskApp 
   jobs:
   - job: Build_and_Run
-    displayName: Build and Run
+    displayName: Build
     pool:
       vmImage: ubuntu-latest
     steps:
