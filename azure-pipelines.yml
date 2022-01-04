@@ -5,11 +5,6 @@ schedules:
     include:
     - new_branch
 
-trigger:
-  branches:
-    include:
-      - new_branch
-
 pool:
   vmImage: ubuntu-latest
 
