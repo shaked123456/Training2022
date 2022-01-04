@@ -1,6 +1,9 @@
 schedules:
 - cron: "*/5 * * * *"
   displayName: test-build
+  branches:
+    exclude:
+      - new_branch
 
 pool:
   vmImage: ubuntu-latest
