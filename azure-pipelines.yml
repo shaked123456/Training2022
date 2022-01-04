@@ -1,9 +1,6 @@
 schedules:
-- cron: "3 15 * * *"
+- cron: "*/5 * * * *"
   displayName: test-build
-  branches:
-    include:
-    - new_branch
 
 pool:
   vmImage: ubuntu-latest
