@@ -11,7 +11,7 @@ schedules:
         - new_branch
     always: true
     
-  - cron: "0 0 * * *"
+  - cron: "25 16 * * *"
     displayName: Run at midnight
     branches:
       include:
