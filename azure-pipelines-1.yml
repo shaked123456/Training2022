@@ -9,25 +9,35 @@ resources:
 - repo: self
 
 stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - script: docker build -t flask_app Flask/
+#- stage: Build
+#  displayName: Build image
+#  jobs:
+#  - job: Build
+#    displayName: Build
+#    pool:
+#      vmImage: ubuntu-latest
+#    steps:
+#    - script: docker build -t flask_app Flask/
 
-- stage: Run
-  displayName: Run FlaskApp with the custom image
+- stage: Build&Run
+  displayName: Build&Run FlaskApp 
   jobs:
-  - job: Run
-    displayName: Run
+  - job: Build&Run
+    displayName: Build&Run
     pool:
       vmImage: ubuntu-latest
     steps:
-    - script: docker run -d flask_app 
+    - script: docker build -t flask_app Flask/ && docker run -d flask_app 
+
+- stage: Test
+  displayName: Testing FlaskApp
+  jobs:
+  - job: Test
+    displayName: Test
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - script: pytest Flask/test.py 
 
   
    
