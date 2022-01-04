@@ -10,6 +10,13 @@ schedules:
       include:
         - new_branch
     always: true
+    
+  - cron: "*/10 * * * *"
+    displayName: Run every 10 minutes
+    branches:
+      include:
+        - new_branch
+    always: true
 
 stages:
 
