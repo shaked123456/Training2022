@@ -36,4 +36,4 @@ stages:
        displayName: Build services
        inputs:
          action: Build services
-         dockerComposeFile: 'docker-compose.yml'
+         dockerComposeFile: 'Training2022/docker-compose.yml'
