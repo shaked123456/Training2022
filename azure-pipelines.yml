@@ -16,7 +16,7 @@ schedules:
     branches:
       include:
         - new_branch
-    always: true
+    always: false
 
 stages:
 
