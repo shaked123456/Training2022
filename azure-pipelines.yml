@@ -32,6 +32,8 @@ stages:
         versionSpec: '$(pythonVersion)'
        displayName: 'Use Python $(pythonVersion)'
 
-     - script: |
-        pip install -r Flask/requirements.txt
-        python Flask/app.py
+     - task: DockerCompose@0
+       displayName: Build services
+       inputs:
+         action: Build services
+         dockerComposeFile: docker-compose.yml
