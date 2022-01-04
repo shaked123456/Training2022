@@ -11,8 +11,8 @@ schedules:
         - new_branch
     always: true
     
-  - cron: "*/10 * * * *"
-    displayName: Run every 10 minutes
+  - cron: "0 0 * * *"
+    displayName: Run at midnight
     branches:
       include:
         - new_branch
